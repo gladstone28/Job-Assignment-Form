@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Assignment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Job Assignment Form</h1>
+        <p>Fill out the form below to assign a job to a tradesman. Attach any relevant documents before submitting.</p>
+    </header>
+    <main>
+        <form action="https://formspree.io/YOUR_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tradesmanName">Tradesman Name:</label>
+                <input type="text" id="tradesmanName" name="tradesmanName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="document">Attach Job Form (scan or electronic copy):</label>
+                <input type="file" id="document" name="document" accept=".pdf, .docx, .jpg, .png" required>
+            </div>
+
+            <button type="submit">Submit Job Assignment</button>
+        </form>
+    </main>
+</body>
+</html>
